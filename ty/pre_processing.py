@@ -1,49 +1,46 @@
-from __future__ import print_function, division
 import os
-import torch
-import csv
 import pandas as pd
-import numpy as np
 import glob as glob
-import matplotlib.pyplot as plt
-from torch.utils.data import dataloader
-from torchvision import transforms, utils
 
 root_path = "/fruits-360"
 Training_path = "/Training"
 Test_path = "/Test"
+print(os.getcwd())
+
+def preprocessing(dataset_type):
+    data = {'image_path':[], 'image_idx':[]}
+    path = os.listdir(os.getcwd() + '/fruits-360/' + dataset_type)
+
+    for i in path:
+        img_path = glob.glob(f'./fruits-360/{dataset_type}/{i}/*.jpg')
+        img_idx = path.index(i)
+        data['image_path'].extend(img_path)
+        data['image_idx'].extend(img_idx for _ in range(len(img_path)))
+
+    dataframe = pd.DataFrame(data)
+    dataframe.to_csv(f'{dataset_type}.csv', index=False)
+
+
 
 """
-workspace_path = os.path.dirname(os.path.realpath(__file__))
-dir_path = workspace_path + root_path + Training_path
+for i in os.listdir(os.getcwd() + "/fruits-360/Training"):
+    img_path = glob.glob(f'./fruits-360/Training/{i}/*.jpg')
+    img_idx = i
+    data['image_path'].extend(img_path)
+    data['image_idx'].extend(img_idx for _ in range(len(img_path)))
+print(len(data['image_path']))
+print(len(data['image_idx']))
 
-os.listdir(dir_path)
+with open('datatest.csv', 'w') as f:
+    writer = csv.DictWriter(f, fieldnames=data)
+    writer.writeheader()
+    for elem in data:
+        writer.writerow(elem)
 
-print("before: %s"%os.getcwd())
-os.chdir("./ty" + root_path + Training_path)
-print("after: %s"%os.getcwd())
-
-test_dir = os.listdir(os.getcwd())
-test_dir.sort()
-print(test_dir)
+dataframe = pd.DataFrame(data)
+dataframe.to_csv("datatest.csv", index=False)
 """
 
-class FruitDataLoader():
-    def __init__(self, dataform):
-        if dataform == 'training':
-            os.chdir("./ty" + root_path + Training_path)
-        elif dataform == 'test':
-            os.chdir("./ty" + root_path + Test_path)
-        datasets_list = os.listdir(os.getcwd()).sort()
-        return datasets_list
-
-    def __getitem__(self, idx):
-        
-        return
-    
-    def __len__(self):
-
-        return
-
-dataloader = FruitDataLoader('training')
-print(str(dataloader))
+preprocessing('Training')
+preprocessing('Test')
+print("==== PreProcessing is end ====")
