@@ -1,0 +1,6 @@
+{
+    "jupyter.jupyterServerType": "local",
+    "python.linting.pylintEnabled":true,
+    "python.linting.enabled":true,
+    "python.pythonPath": "/home/vim/Desktop/tykim/Anaconda3/envs/tykim/bin/python3.7.exe"
+}
