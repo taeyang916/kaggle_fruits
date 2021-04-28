@@ -20,27 +20,7 @@ def preprocessing(dataset_type):
     dataframe = pd.DataFrame(data)
     dataframe.to_csv(f'{dataset_type}.csv', index=False)
 
-
-
-"""
-for i in os.listdir(os.getcwd() + "/fruits-360/Training"):
-    img_path = glob.glob(f'./fruits-360/Training/{i}/*.jpg')
-    img_idx = i
-    data['image_path'].extend(img_path)
-    data['image_idx'].extend(img_idx for _ in range(len(img_path)))
-print(len(data['image_path']))
-print(len(data['image_idx']))
-
-with open('datatest.csv', 'w') as f:
-    writer = csv.DictWriter(f, fieldnames=data)
-    writer.writeheader()
-    for elem in data:
-        writer.writerow(elem)
-
-dataframe = pd.DataFrame(data)
-dataframe.to_csv("datatest.csv", index=False)
-"""
-
 preprocessing('Training')
 preprocessing('Test')
 print("==== PreProcessing is end ====")
+
