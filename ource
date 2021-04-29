@@ -1,0 +1,77 @@
+[33mcommit 92951ce361718cfbd3c55caa67313677242c6195[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Wed Apr 28 23:02:14 2021 +0900
+
+    dataset sort and labelling, train
+
+[33mcommit d545371668bf93249c333a8f2732c112f0c2865a[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Wed Apr 28 21:46:09 2021 +0900
+
+    train.py and labeaining and labelling working on
+
+[33mcommit 62d96b9677b46f96ddfb98e3b1fbc0d4903a7b54[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Wed Apr 28 00:07:58 2021 +0900
+
+    add train.py
+
+[33mcommit 13963fa828edc27fe0158f784cdbdca83ecaa71d[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Wed Apr 28 00:05:56 2021 +0900
+
+    add dataloder
+
+[33mcommit a336e085a09e43f377abd3283796399f15b9bc54[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Tue Apr 27 22:15:51 2021 +0900
+
+    pre_processing.py finish and add Training.csv / Test.csv
+
+[33mcommit 15a59e0eafe119c936088bde96513bc56da8f0d7[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Tue Apr 27 19:36:09 2021 +0900
+
+    directory path
+
+[33mcommit 7fc757a9dcaf87364494deed1b60e530359460bf[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Mon Apr 26 13:01:16 2021 +0900
+
+    add pre_processing.py
+
+[33mcommit 6055015822e3c940209d61bb09aa3a288fc7945f[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Sun Apr 25 23:37:52 2021 +0900
+
+    fruit data
+
+[33mcommit a42696af284d6c2662c9ce97a1a8a89b3e426bf4[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Sun Apr 25 23:26:28 2021 +0900
+
+    renamed repository
+
+[33mcommit 2c7d2d2ad03567c504fe6e7d797eaae042e40530[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Sun Apr 25 23:15:37 2021 +0900
+
+    connect vscode
+
+[33mcommit 975bc5762359c65a85901828354f463fe4a6ddd6[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Sun Apr 25 22:48:58 2021 +0900
+
+    global config test
+
+[33mcommit 8f391ddab27cf9fab3d931e766087ed40ff15aa7[m
+Author: taeyang916 <taeyang916@github.com>
+Date:   Sun Apr 25 22:46:10 2021 +0900
+
+    add ty folder and dataset.py file
+
+[33mcommit 872e90eada9ae3e04f27572107e3fc16c9d464c9[m
+Author: taeyang916 <taeyang916@naver.com>
+Date:   Sun Apr 25 22:37:47 2021 +0900
+
+    2021-04-25 first commit
