@@ -9,5 +9,4 @@ class Configure():
         return cfg
 
     def set_cfg(cfg_type):
-        cfg = cfg_model['personal_net'] if cfg_type == 'personal_net' else cfg_model('vgg16')
-        return cfg
+        return cfg_model[cfg_type]
