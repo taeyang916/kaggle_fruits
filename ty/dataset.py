@@ -21,34 +21,3 @@ class FruitDataLoader(DataLoader):
     
     def __len__(self):
         return len(self.dataset)
-
-"""
-# %%
-import torchvision
-import matplotlib.pyplot as plt
-
-transform = torchvision.transforms.Compose([
-    torchvision.transforms.ToTensor(),
-    torchvision.transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.25, 0.25, 0.25)),
-])
-
-# dataset_type : 'Training' or 'Test'
-train_dataset = FruitDataLoader(dataset_type='Training', transform=transform)
-trainloader = DataLoader(train_dataset, batch_size=10, shuffle=True)
-
-test_dataset = FruitDataLoader(dataset_type='Test', transform=transform)
-testloader = DataLoader(test_dataset, batch_size=10, shuffle=False)
-
-
-
-
-for train_batch in trainloader:
-    image, label = train_batch
-    for i in range(3):
-        plt.imshow(image[i].permute(1, 2, 0))
-        plt.show()
-        print(label[i])
-        print(image[i].shape)
-    break
-
-"""

@@ -2,11 +2,14 @@ import torch
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+
 from vggModel import VGG
 from labelling import Labelling
 from dataset import FruitDataLoader
 from transformer import Transformer as tfm
-import os
+from configure import Configure
+
 
 
 def imshow(img):
@@ -24,8 +27,9 @@ def train():
 
     classes = Labelling.labelling_()
 
-    cfg = [32, 32, 'M', 64, 64, 128, 128, 128, 'M', 256, 256, 256, 512, 512, 512, 'M']
-    
+    # cfg_type : 'personal_net', 'vgg16'
+    cfg = Configure.make_configure(cfg_type='personal_net')
+
     epochs = 30
     transform = tfm.create_transformer()
     batchsize = 16
@@ -33,9 +37,6 @@ def train():
     # dataset_type : 'Training' or 'Test'
     train_dataset = FruitDataLoader(dataset_type='Training', transform=transform)
     trainloader = DataLoader(train_dataset, batch_size=batchsize, shuffle=True)
-
-    test_dataset = FruitDataLoader(dataset_type='Test', transform=transform)
-    testloader = DataLoader(test_dataset, batch_size=10, shuffle=False)
 
     vgg16 = VGG(VGG.make_layers(cfg), len(classes), True).to(device)
 

@@ -3,11 +3,13 @@ import torchvision
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+
 from vggModel import VGG
 from labelling import Labelling
 from dataset import FruitDataLoader
 from transformer import Transformer as tfm
-import os
+from configure import Configure
 
 def imshow(img):
     img = img/2 + 0.5
@@ -24,10 +26,9 @@ def test():
 
     classes = Labelling.labelling_()
 
-    cfg = [32, 32, 'M', 64, 64, 128, 128, 128, 'M', 256, 256, 256, 512, 512, 512, 'M']
+    # cfg_type : 'personal_net', 'vgg16'
+    cfg = Configure.make_configure(cfg_type='personal_net')
 
-    
-    epochs = 30
     transform = tfm.create_transformer()
     batchsize = 10
 
