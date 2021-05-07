@@ -30,7 +30,7 @@ def train():
     # cfg_type : 'personal_net', 'vgg16'
     cfg = Configure.make_configure(cfg_type='personal_net')
     
-    epochs = 30
+    epochs = 10
     transform = tfm.create_transformer()
     batchsize = 16
 
